@@ -15,7 +15,7 @@ function App() {
             <span className="player-symbol">O</span>
           </li>
         </ol>
-          Game Board
+          Game Boards
       </div>
       log
     </main>
