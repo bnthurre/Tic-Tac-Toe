@@ -1,4 +1,4 @@
-import Players from "./components/Players"
+import Player from "./components/Player"
 
 function App() {
   return (
@@ -6,8 +6,8 @@ function App() {
       <div id="game-container">
         <ol id="players">
           
-          <Players playerName={"Player 1"} playerSymbol={'X'}/>
-          <Players playerName={"Player 2"} playerSymbol={'O'}/>
+          <Player playerName={"Player 1"} playerSymbol={'X'}/>
+          <Player playerName={"Player 2"} playerSymbol={'O'}/>
         </ol>
         Game Boards
       </div>
