@@ -1,20 +1,28 @@
 import React, { useState } from 'react'
 
-const Players = ({ playerName, playerSymbol }) => {
+const Players = ({ initialplayerName, playerSymbol }) => {
+    const [playerName, setPlayerName] = useState(initialplayerName)
     const [isEdeting, setIsEdeting] = useState(false);
+
     const handleEditClick = () => {
         setIsEdeting(!isEdeting)
     }
-    let editablePlayer = <span className="player-name">{playerName}</span>
+
+    const handelChange=(e)=>{
+        setPlayerName(e.target.value)
+
+    }
+
+    let EditablePlayerName = <span className="player-name">{playerName}</span>
     let btnCaption = 'Edit'
     if(isEdeting){
-        editablePlayer = <input type='text' required value={playerName}/>
+        EditablePlayerName = <input type='text' required value={playerName} onChange={handelChange}/>
         btnCaption='Save'
     }
     return (
         <li>
             <span className="player">
-                {editablePlayer}
+                {EditablePlayerName}
                 <span className="player-symbol">{playerSymbol}</span>
             </span>
             {/* altenative */}
