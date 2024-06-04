@@ -1,3 +1,4 @@
+import GameBoard from "./components/GameBoard"
 import Player from "./components/Player"
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
           <Player initialplayerName={"Player 1"} playerSymbol={'X'}/>
           <Player initialplayerName={"Player 2"} playerSymbol={'O'}/>
         </ol>
-        Game Boards
+        <GameBoard />
       </div>
       log
     </main>
