@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 
-const Players = ({ initialplayerName, playerSymbol }) => {
+const Player = ({ initialplayerName, playerSymbol }) => {
     const [playerName, setPlayerName] = useState(initialplayerName)
     const [isEdeting, setIsEdeting] = useState(false);
 
     const handleEditClick = () => {
-        setIsEdeting(!isEdeting)
+        setIsEdeting((isEdeting) => !isEdeting)
     }
 
     const handelChange=(e)=>{
@@ -32,4 +32,4 @@ const Players = ({ initialplayerName, playerSymbol }) => {
     )
 }
 
-export default Players
+export default Player
