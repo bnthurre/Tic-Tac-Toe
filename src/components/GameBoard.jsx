@@ -4,14 +4,15 @@ const initialGameBoard = [
     [null, null, null],
     [null, null, null],
 ]
-const GameBoard = () => {
+const GameBoard = ({onSelectSquare, activePlayerSymbol}) => {
     const [gameBoard, setGameBoard] = useState(initialGameBoard);
     const handleSelectSquare = (rowindex, colindex) => {
         setGameBoard((prevGameBoard) => {
             const updateGameBoard = [...prevGameBoard]
-            updateGameBoard[rowindex][colindex] = 'X'
+            updateGameBoard[rowindex][colindex] = activePlayerSymbol
             return updateGameBoard
         })
+        onSelectSquare()
     }
     return (
         <ol id='game-board'>
